@@ -1,0 +1,248 @@
+/* General Body Styling */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(135deg, #ff6f61, #ffcb77, #7f5fc8);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 18px; /* Reduced font size */
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px; /* Reduced font size */
+    position: relative;
+    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    transition: width 0.3s;
+}
+
+nav a:hover {
+    color: #a2c2e0;
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section Styling */
+.hero {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+    height: 250px;
+    margin-top: -20px;
+    overflow: hidden;
+    border-bottom: 3px solid #a2c2e0;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero h2 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 16px; /* Increased font size */
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out 0.5s;
+}
+
+.cta-button {
+    background: #a2c2e0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px; /* Increased font size */
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #8cbfdd;
+    transform: scale(1.05);
+}
+
+/* Features Section Styling */
+.features {
+    padding: 20px 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.features h2 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 10px;
+    color: #a2c2e0;
+}
+
+.feature-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 15px;
+    display: inline-block;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+    font-size: 40px; /* Increased font size */
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    font-size: 20px; /* Increased font size */
+    margin-bottom: 8px;
+    color: #a2c2e0;
+}
+
+.feature-box p {
+    font-size: 16px; /* Increased font size */
+}
+
+/* Scrolling Marquee Styling */
+.marquee {
+    background: rgba(0, 0, 0, 0.7);
+    color: #a2c2e0;
+    padding: 15px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.marquee p {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+/* Footer Styling */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px; /* Reduced font size */
+}
+
+/* Login, Leaderboard, and Dashboard Sections */
+.login, .leaderboard, .dashboard {
+    padding: 20px;
+    margin-top: 80px; /* Adjusted margin to move sections down */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes for Gradient Background Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Keyframes for Marquee Scrolling */
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Page Layout */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Login Section Styling */
+.login {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Adjusted max-width */
+    margin: 20px auto;
+}
+
+/* Consistent Styling for Other Sections */
+.dashboard, .leaderboard {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px; /* Adjusted max-width */
+    margin: 20px auto;
+}
+
